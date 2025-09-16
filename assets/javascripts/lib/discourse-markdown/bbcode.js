@@ -80,6 +80,21 @@ function setupMarkdownIt(md) {
     wrap: wrap("a", "href", (tagInfo) => "#" + tagInfo.attrs._default),
   });
 
+  ruler.push("attach", {
+    tag: "attach",
+    wrap: wrap("div", "style", () => "background-color:red"),
+  });
+
+  ruler.push("align", {
+    tag: "align",
+
+    wrap: wrap(
+      "span",
+      "style",
+      (tagInfo) => "text-align:" + tagInfo.attrs._default.trim()
+    ),
+  });
+
   ["left", "right", "center"].forEach((dir) => {
     md.block.bbcode.ruler.push(dir, {
       tag: dir,
