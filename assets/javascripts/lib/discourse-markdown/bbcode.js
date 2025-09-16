@@ -82,7 +82,7 @@ function setupMarkdownIt(md) {
 
   ruler.push("attach", {
     tag: "attach",
-    wrap: wrap("div", "style", () => "background-color:red"),
+    wrap: wrap("span", "style", () => "background-color:#fcf8e3"),
   });
 
   ruler.push("align", {
