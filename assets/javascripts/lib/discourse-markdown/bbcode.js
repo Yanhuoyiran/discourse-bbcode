@@ -89,7 +89,7 @@ function setupMarkdownIt(md) {
     tag: "align",
 
     wrap: wrap(
-      "span",
+      "div",
       "style",
       (tagInfo) => "text-align:" + tagInfo.attrs._default.trim()
     ),
